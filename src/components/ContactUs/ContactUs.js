@@ -11,6 +11,7 @@ const ContactUs = () => {
   });
 
   // State to track errors
+  // errors
   const [errors, setErrors] = useState({});
 
   // Handle input changes

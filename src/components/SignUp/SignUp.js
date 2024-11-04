@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center min-h-screen bg-green-100 ">
     <div className="bg-white p-10 rounded-lg shadow-md w-full max-w-md">
       <h2 className="text-2xl font-bold text-center mb-4">Sign up for Farmers Direct</h2>
 

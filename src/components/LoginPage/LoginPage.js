@@ -35,14 +35,14 @@ export default function LoginPage(){
                 <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#0a0a0a', color: '#fff', border: 'none', borderRadius: '10px', cursor: 'pointer' }}>LOGIN</button>    
       </form>
       
-      <div className="flex justify-end font-bold" style={{ backgroundColor: 'transparent', marginTop: '10px' }}>
+      <div className="flex justify-end text-black" style={{ backgroundColor: 'transparent', marginTop: '10px' }}>
   <button style={{ backgroundColor: 'transparent', border: 'none', cursor: 'pointer', color: 'black' }}>
     Forgot password?
   </button>
 </div>
  <br/>     
       <div>
-      <div className="font-bold text-black">Don't have an account?
+      <div className=" text-black">Don't have an account?
   <span className="cursor-pointer text-orange-500 "> Register</span>
 </div>
   </div>

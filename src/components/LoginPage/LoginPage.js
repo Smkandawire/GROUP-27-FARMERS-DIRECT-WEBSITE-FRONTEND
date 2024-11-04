@@ -43,7 +43,7 @@ export default function LoginPage(){
  <br/>     
       <div>
       <div className=" text-black">Don't have an account?
-  <span className="cursor-pointer text-orange-500 "> Register</span>
+  <span className="cursor-pointer text-orange-500 font-medium "> Register</span>
 </div>
   </div>
   <br/>

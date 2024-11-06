@@ -17,6 +17,12 @@ const ContactUs = () => {
   // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+
+    // Clear error message for the specific field being edited
+    if (errors[name]) {
+      setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
+    }
+
     setFormData({
       ...formData,
       [name]: value,
@@ -73,7 +79,7 @@ const ContactUs = () => {
           <div className="bg-green-400 h-32 w-32 rounded-lg shadow-md transition transform hover:scale-105"></div>
         </div>
 
-        <div className="max-w-xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg shadow-md">
+        <div className="max-w-xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg shadow-lg">
           <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">
             {/* Full Name */}
             <div className="relative">
@@ -85,9 +91,7 @@ const ContactUs = () => {
                 onChange={handleInputChange}
                 placeholder="Full Name"
                 title="Enter your full name"
-                className={`w-full pl-10 pr-4 py-3 border ${
-                  errors.fullName ? 'border-red-500' : 'border-gray-300'
-                } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500`}
+                className={`w-full pl-10 pr-4 py-3 border ${errors.fullName ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 transition duration-300`}
               />
               {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
             </div>
@@ -102,9 +106,7 @@ const ContactUs = () => {
                 onChange={handleInputChange}
                 placeholder="Email Address"
                 title="Enter a valid email address"
-                className={`w-full pl-10 pr-4 py-3 border ${
-                  errors.email ? 'border-red-500' : 'border-gray-300'
-                } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500`}
+                className={`w-full pl-10 pr-4 py-3 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 transition duration-300`}
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
@@ -119,9 +121,7 @@ const ContactUs = () => {
                 onChange={handleInputChange}
                 placeholder="Subject"
                 title="Enter the subject of your message"
-                className={`w-full pl-10 pr-4 py-3 border ${
-                  errors.subject ? 'border-red-500' : 'border-gray-300'
-                } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500`}
+                className={`w-full pl-10 pr-4 py-3 border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 transition duration-300`}
               />
               {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
             </div>
@@ -136,9 +136,7 @@ const ContactUs = () => {
                 placeholder="Type your message"
                 title="Enter your message here"
                 rows="5"
-                className={`w-full pl-10 pr-4 py-3 border ${
-                  errors.message ? 'border-red-500' : 'border-gray-300'
-                } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500`}
+                className={`w-full pl-10 pr-4 py-3 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 transition duration-300`}
               ></textarea>
               {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
             </div>
@@ -146,7 +144,7 @@ const ContactUs = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className={`w-full mt-6 py-3 ${isSubmitting ? 'bg-gray-400' : 'bg-green-600'} text-white font-semibold rounded-lg shadow-md hover:bg-green-500 transition duration-300`}
+              className={`w-full mt-6 py-3 ${isSubmitting ? 'bg-gray-400' : 'bg-green-600'} text-white font-semibold rounded-lg shadow-md hover:bg-green-500 transition duration-300 transform ${isSubmitting ? 'cursor-not-allowed' : 'hover:scale-105'}`}
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}

@@ -92,9 +92,8 @@ const AboutUs = () => {
 
               </div>
               <div className="mt-5">
-                <h3 className="text-lg font-medium text-black">Secure Payments Methods</h3>
-                <p className="mt-2 text-base">We aim to make the world a better place through innovation
-                  and collaboration.</p>
+                <h3 className="text-lg font-medium text-black">Trustworthiness</h3>
+                <p className="mt-2 text-base">Building strong relationships based on honesty and reliability.</p>
               </div>
             </div>
             <div>
@@ -104,12 +103,10 @@ const AboutUs = () => {
                   <path stroke-linecap="round" stroke-linejoin="round"
                     d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
                 </svg>
-
-              </div>
+                </div>
               <div className="mt-5">
-                <h3 className="text-lg font-medium text-black">Honesty and Integrity</h3>
-                <p className="mt-2 text-base">We believe in honesty, integrity, and respect for all
-                  individuals.</p>
+                <h3 className="text-lg font-medium text-black">Secure Payment Methods</h3>
+                <p className="mt-2 text-base">Ensuring safe and secure transactions for all users.</p>
               </div>
             </div>
             <div>
@@ -123,9 +120,9 @@ const AboutUs = () => {
 
               </div>
               <div className="mt-5">
-                <h3 className="text-lg font-medium text-black">Logistics Support</h3>
-                <p className="mt-2 text-base">We envision a world where technology is used to solve the
-                  most pressing issues facing humanity and improve people's lives.</p>
+                
+                <h3 className="text-lg font-medium text-black">Honesty and Integrity</h3>
+                <p className="mt-2 text-base">Conducting business with the highest ethical standards</p>
               </div>
             </div>
           </div>

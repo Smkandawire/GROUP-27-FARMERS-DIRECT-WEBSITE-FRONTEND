@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function LoginPage(){
   const handleSubmit = (event) =>{
@@ -11,6 +12,7 @@ export default function LoginPage(){
     console.log("Password:", password);
   };
   return(
+    <div className='flex  bg-green-100'>
     <div className='container ' style={{ maxWidth: '400px', margin: '50px auto', backgroundColor: '#FFF', padding: '20px', borderRadius: '5px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
       <form onSubmit={handleSubmit}>
       <div className="flex items-center justify-center">
@@ -35,23 +37,25 @@ export default function LoginPage(){
                 <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#0a0a0a', color: '#fff', border: 'none', borderRadius: '10px', cursor: 'pointer' }}>LOGIN</button>    
       </form>
       
-      <div className="flex justify-end font-bold" style={{ backgroundColor: 'transparent', marginTop: '10px' }}>
+      <div className="flex justify-end " style={{ backgroundColor: 'transparent', marginTop: '10px' }}>
   <button style={{ backgroundColor: 'transparent', border: 'none', cursor: 'pointer', color: 'black' }}>
     Forgot password?
   </button>
 </div>
  <br/>     
       <div>
-      <div className="font-bold text-black">Don't have an account?
-  <span className="cursor-pointer text-orange-500 "> Register</span>
+      <div className=" text-black">Don't have an account?
+  <span><Link to="/SignUp" className="cursor-pointer text-orange-500" >
+            Register
+          </Link></span>
 </div>
   </div>
   <br/>
   <br/>
-
+  
   </div>
   
-
+</div>
     
   )
 }

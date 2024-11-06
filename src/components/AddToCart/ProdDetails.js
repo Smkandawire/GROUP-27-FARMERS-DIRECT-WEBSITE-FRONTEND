@@ -38,10 +38,8 @@ const ProductDetails = () => {
           <h1 className='text-4xl font-bold mb-2'>Details</h1>
           <div className="w-full h-0.5 bg-black mb-4"></div>
 
-          <div className="text-2xl font-bold mb-2">MWK{product.name}</div>
-          <p className="text-2xl font-semibold mb-4 text-yellow-500">
-            {product.price}
-          </p>
+          <div className="text-2xl font-bold mb-2">{product.name}</div>
+          <p className="text-2xl font-semibold mb-4 text-[rgb(255,215,0)]">MWK{product.price} </p>
           <p className="text-gray-700 mb-4">{product.description}</p>
 
           {/* payment button */}

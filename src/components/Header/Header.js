@@ -25,7 +25,8 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <div className=' bg-green-100 p-8 space-y-6'> 
+      
       <div className='bg-green-500 text-xl font-light m-2 p-4 text-white rounded-full border-2'>
    
         <nav>

@@ -8,7 +8,7 @@ const Service = ({ products, addToCart, cartItemCount }) => {
         <>
         
             <div onClick={() => navigate('/checkout')}
-                className="flex justify-end text-blue-600 px-4">
+                className="flex justify-end cursor-pointer  px-4">
                 Checkout your cart List ({cartItemCount})
             </div>
            <div className="relative p-4">

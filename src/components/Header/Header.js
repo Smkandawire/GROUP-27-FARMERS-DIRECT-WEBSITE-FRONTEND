@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <div className=' bg-green-100 p-8 space-y-6'> 
+    <div className='text-base sm:text-lg md:text-xl lg:text-2xl'> 
       
       <div className='bg-green-500 text-xl font-light m-2 p-4 text-white rounded-full border-2'>
    

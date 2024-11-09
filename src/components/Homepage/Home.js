@@ -8,8 +8,8 @@ const Home= () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
     {/* Banner */}
-    <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
-      <img src= {farmersdirect}  alt="Farmer Banner"  className="w-full md:h-48"/>
+    <div className="relative bg-white rounded-lg  overflow-hidden">
+      <img src= {farmersdirect}  alt="Farmer Banner"  class="w-full h-[50vh] object-fit" />
       <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center">
         <h1 className="text-4xl font-bold text-orange-500 uppercase mb-4">
           Welcome to Farmers Direct
@@ -19,35 +19,49 @@ const Home= () => {
     </div>
 
     {/* Featured Deals Section */}
-    <div className="mt-10">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold text-gray-800">Featured Deals</h2>
+    <div className="flex flex-col">
+      <div className="flex justify-between items-center m-4">
+        <h2 className="flex justify-center text-2xl font-bold text-gray-800">Featured Deals</h2>
         <a href="#" className="text-orange-500 hover:underline">view all</a>
       </div>
-      <div className="grid grid-cols-3 gap-6">
-        <div className="bg-white rounded-lg shadow-lg p-4 text-center">
+      <div className="flex flex-cols gap-5 p-5">
+      <div className="bg-white text-center">
           <img
             src={Agrichemicals}// Replace with your product image URL
             alt="Machinery"
-            className="w-full h-40 object-cover rounded"
+            className="w-full h-40 object-fit rounded"
           />
           <h3 className="text-orange-600 font-bold mt-2">Machinery</h3>
+          <h4 className='text-green-300'>GET YOUR FARMING MACHINERIES AT FAMERS-DIRECT</h4>
         </div>
-        <div className="bg-white rounded-lg shadow-lg p-4 text-center">
+        <div className="bg-white text-center">
+          <img
+            src={Agrichemicals}// Replace with your product image URL
+            alt="Machinery"
+            className="w-full h-40 object-fit rounded"
+          />
+          <h3 className="text-orange-600 font-bold mt-2">Machinery</h3>
+          <h4 className='text-green-300'>GET YOUR FARMING MACHINERIES AT FAMERS-DIRECT</h4>
+        </div>
+        <div className="bg-white text-center
+        ">
           <img
             src={organics}// Replace with your product image URL
             alt="Agri-chemicals"
-            className="w-full h-40 object-cover rounded"
+            className="w-full h-40 object-fit rounded"
           />
           <h3 className="text-orange-600 font-bold mt-2">Agri-chemicals</h3>
+          <h4 className='text-green-300'>GET YOUR FARMING MACHINERIES AT FAMERS-DIRECT</h4>
+          <h4></h4>
         </div>
-        <div className="bg-white rounded-lg shadow-lg p-4 text-center">
+        <div className="bg-white text-center">
           <img
           src={chicken} // Replace with your product image URL
             alt="Live Stock"
-            className="w-full h-40 object-cover rounded"
+            className="w-full h-40 object-fit rounded"
           />
           <h3 className="text-orange-600 font-bold mt-2">Live Stock</h3>
+          <h4 className='text-green-300'>GET YOUR FARMING MACHINERIES AT FAMERS-DIRECT</h4>
         </div>
       </div>
     </div>

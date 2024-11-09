@@ -6,9 +6,9 @@ const Checkout = ({ cart, updateQuantity, removeFromCart }) => {
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
-        <div className="p-6">
+        <div className="p-6 h-96">
             {cart.length === 0 ? (
-                <p>Your cart is empty.</p>
+                <p className='font-bold'>Your cart is empty.</p>
             ) : (
                 <>
                     {cart.map((item) => (

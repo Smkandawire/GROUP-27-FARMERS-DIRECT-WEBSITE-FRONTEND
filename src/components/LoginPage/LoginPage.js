@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 02cf0842c1a9fc5b4b37920ce8f2f5cc35090065
 export default function LoginPage(){
   const handleSubmit = (event) =>{
     event.preventDefault();
@@ -44,8 +48,13 @@ export default function LoginPage(){
 </div>
  <br/>     
       <div>
+<<<<<<< HEAD
       <div className=" text-black">Don't have an account?
   <span ><Link to="/SignUp" className="cursor-pointer text-orange-500 font- " >Register</Link>  </span>
+=======
+      <div className="flex justify-center font-bold text-black">Don't have an account?
+  <span className="flex justify-center cursor-pointer text-orange-500 "><Link to ='/SignUp'>Register</Link></span>
+>>>>>>> 02cf0842c1a9fc5b4b37920ce8f2f5cc35090065
 </div>
   </div>
   <br/>

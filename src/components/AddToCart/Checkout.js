@@ -49,7 +49,7 @@ const Checkout = ({ cart, updateQuantity, removeFromCart }) => {
                     {/* Payment button */}
                     <div className="flex justify-end mt-4">
                         <button  >
-                        <Link to="/Payment" oncl className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-800" >
+                        <Link to="/LoginPage" oncl className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-800" >
             Make Payment
           </Link>   
                         </button>

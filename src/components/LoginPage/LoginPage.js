@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function LoginPage(){
   const handleSubmit = (event) =>{
     event.preventDefault();
@@ -40,8 +41,8 @@ export default function LoginPage(){
 </div>
  <br/>     
       <div>
-      <div className="font-bold text-black">Don't have an account?
-  <span className="cursor-pointer text-orange-500 "> Register</span>
+      <div className="flex justify-center font-bold text-black">Don't have an account?
+  <span className="flex justify-center cursor-pointer text-orange-500 "><Link to ='/SignUp'>Register</Link></span>
 </div>
   </div>
   <br/>

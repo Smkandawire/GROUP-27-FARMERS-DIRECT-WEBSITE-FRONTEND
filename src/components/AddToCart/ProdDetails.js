@@ -7,7 +7,7 @@ const ProductDetails = () => {
   const { cart} = useCartHandler();
   const [product, setProduct] = useState(null);
 
-  // Find the product that matches the id from the URL
+  // Find the product that matches the id 
   useEffect(() => {
     const foundProduct = cart.products.find((p) => p.id === parseInt(productId));
     setProduct(foundProduct);
@@ -18,37 +18,40 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="mx-auto p-6 bg-green-100 ">
       
-      {/* Checkout list Button */}
-      <div className="flex justify-end font-bold mt-4">
-        <Link to="/checkout" className="text-blue-600 py-2 px-4 hover:underline">
-          Checkout your cart list
-        </Link>
-      </div>
-
-      <div className="flex flex-col md:flex-row gap-8 mt-6">
-        {/* Product Image */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-          <img src={product.image} alt={product.name}  className="w-full h-auto max-w-md border-2 border-gray-300 rounded-lg object-cover" />
+            {/* Checkout list Button */}
+        <div className="flex justify-end font-bold mt-4">
+            <Link to="/checkout" className="text-blue-600 py-2 px-4 hover:underline hover:text-blue-800">
+                     Checkout your cart list
+           </Link>
         </div>
 
-        {/* Product Details */}
-        <div className="w-full md:w-1/2">
-          <h1 className='text-4xl font-bold mb-2'>Details</h1>
-          <div className="w-full h-0.5 bg-black mb-4"></div>
+      <div className="flex flex-col md:flex-row  px-[4%]">
 
-          <div className="text-2xl font-bold mb-2">{product.name}</div>
-          <p className="text-2xl font-semibold mb-4 text-[rgb(255,215,0)]">MWK{product.price} </p>
-          <p className="text-gray-700 mb-4">{product.description}</p>
 
-          {/* payment button */}
-            <div className="flex justify-end mt-4 bottom-4">
+            {/* Product Image */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-start w-1/2 mb-8">
+             <img src={product.image} alt={product.name}  className="w-full h-auto max-w-md border-2 border-gray-300 rounded-lg object-cover scale-[1.08]" />
+          </div>
+
+            {/* Product Details */}
+         <div className="w-full md:w-1/2 bg-green-100" >
+              <h1 className="text-4xl font-bold mb-2">Details</h1>
+              <div className="w-full h-0.5 bg-black mb-4"></div>
+
+              <div className="text-2xl font-bold mb-2">{product.name}</div>
+              <p className="text-2xl font-semibold mb-4 text-[rgb(225,215,0)]">MWK{product.price}</p>
+              <p className="text-gray-700 mb-4">{product.description}</p>
+              <div className="mt-20"></div>
+
+                 {/* payment button */}
+              <div className="flex justify-start mt-4 bottom-4">
                 <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-800">
-                  <Link to="Payment"> Make payment</Link>    
+                  <Link to="/Payment"> Make payment</Link>    
                 </button>
               </div>
-        </div>
+         </div>
       </div>
     </div>
   );

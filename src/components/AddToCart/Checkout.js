@@ -6,14 +6,14 @@ const Checkout = ({ cart, updateQuantity, removeFromCart }) => {
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
-        <div className="p-6">
+        <div className="p-6 bg-green-100">
             {cart.length === 0 ? (
-                <p>Your cart is empty.</p>
+                <p className="flex flex-row items-center justify-center text-2xl text-red-400">Your cart is empty !!</p>
             ) : (
                 <>
                     {cart.map((item) => (
                         // cart product details
-                        <div key={item.id} className="flex items-center justify-between p-3 mb-4 border border-gray-200 rounded-lg" style={{backgroundColor:'rgb(0,0,0,0.3)'}}>
+                        <div key={item.id} className="flex items-center justify-between p-3 mb-4 border border-gray-200 rounded-lg bg-[rgb(0,0,0,0.3)]">
                             <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded-lg" />
                             <div className="ml-4">
                                 <h2 className="text-lg font-bold text-black-600">{item.name}</h2>
@@ -32,10 +32,10 @@ const Checkout = ({ cart, updateQuantity, removeFromCart }) => {
 
                               {/* Remove from cart button */}
                             <button onClick={() => removeFromCart(item.id)} className="ml-2 text-red-500 relative group" >
+                                🗑️  
                                    <span  className="absolute right-0 top-full mt-1 text-sm text-red-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                                       Remove
                                    </span>
-                                🗑️  
                             </button>
 
                         </div>
@@ -50,8 +50,8 @@ const Checkout = ({ cart, updateQuantity, removeFromCart }) => {
                     <div className="flex justify-end mt-4">
                         <button  >
                         <Link to="/Payment" oncl className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-800" >
-            Make Payment
-          </Link>   
+                          Make Payment
+                        </Link>   
                         </button>
                     </div>
                               

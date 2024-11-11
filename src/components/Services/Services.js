@@ -8,20 +8,19 @@ const Service = ({ products, addToCart, cartItemCount }) => {
         <>
         
             <div onClick={() => navigate('/checkout')}
-                className="flex justify-end cursor-pointer  px-4">
+                className="flex justify-end cursor-pointer bg-green-100 text-blue-500 font-bold hover:underline hover:text-blue-800 px-4">
                 Checkout your cart List ({cartItemCount})
             </div>
-           <div className="relative p-4">
+           <div className="relative">
 
-
-            <div className="flex flex-centerjustify-start ">
+            <div className="flex grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4 items-center bg-green-100">
                 {products.map((product) => (
-                    <div key={product.id} className="w-64 m-4 p-4 border border-gray-200 rounded-lg shadow-md">
+                    <div key={product.id} className=" m-4 border border-gray-300 rounded-lg shadow-md p-1 bg-white" >
                         <img src={product.image} alt={product.name} className="w-full h-32 object-cover" />
                         <h3 className="mt-2 text-lg font-bold">{product.name}</h3>
-                        <p className="text-gray-700">MWK{product.price}</p>
+                        <p className="text-[rgb(225,215,0)] font-bold">MWK{product.price}</p>
                         
-                        <div className="flex justify-between mt-4">
+                        <div className="flex justify-between mt-20">
 
                             {/* Add to cart button */}
                             <button
@@ -33,10 +32,11 @@ const Service = ({ products, addToCart, cartItemCount }) => {
                             {/* Detail button */}
                             <button
                                 onClick={() => navigate(`/product/${product.id}`)}
-                                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+                                className="bg-green-500 text-white px-4 rounded hover:bg-green-600">
                                 Details
                             </button>
                         </div>
+                        <div className="mt-2"></div>
 
                     </div>
                 ))}

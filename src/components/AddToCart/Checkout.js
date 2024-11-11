@@ -6,7 +6,6 @@ const Checkout = ({ cart, updateQuantity, removeFromCart }) => {
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
-
         <div className="p-6 bg-green-100">
             {cart.length === 0 ? (
                 <p className="flex flex-row items-center justify-center text-2xl text-red-400">Your cart is empty !!</p>

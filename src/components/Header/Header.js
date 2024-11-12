@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import  logo from './logo.png'
+
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -23,12 +25,15 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <div className='text-base sm:text-lg md:text-xl lg:text-2xl'> 
+      
       <div className='bg-green-500 text-xl font-light m-2 p-4 text-white rounded-full border-2'>
-        LOGO here
+   
         <nav>
-          <ul className='flex flex-row space-x-20 list-none text-2xl text-black justify-center items-stretch'>
-            <li className="mb-2 cursor-pointer hover:text-orange-500">
+          <ul className='flex items-center flex-row space-x-20 list-none text-2xl text-black justify-center'>
+            <li className='flex items-center justify-start'> 
+              <img src={logo} alt="Logo" class="h-12 md:h-16 lg:h-20 w-auto rounded-full"/> </li>
+            <li className="mb-2 cursor-pointer hover:text-orange-500 ">
               <Link to="/">Home</Link>
             </li>
             <li className="mb-2 cursor-pointer hover:text-orange-500">
@@ -72,7 +77,7 @@ const Header = () => {
               )}
             </li>
             <li className="mb-2 cursor-pointer hover:text-orange-500">
-              <Link to="/AddToCart">
+              <Link to="Checkout">
                 <FontAwesomeIcon icon={faCartPlus} size="1x" />
               </Link>
             </li>

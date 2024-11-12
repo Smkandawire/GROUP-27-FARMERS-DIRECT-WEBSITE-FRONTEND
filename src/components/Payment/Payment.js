@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
+import Card from "../Payment/Card";
 
-const Payment= () => {
+export default function Payment(){
   return (
     <div>
-Payment
+      <Card/>
+      
     </div>
-  );
-};
-
-export default Payment;
+  )
+}

@@ -8,23 +8,31 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import SignUp from "./components/SignUp/SignUp";
 import Footer from "./components/Footer/Footer";
 import LoginPage from "./components/LoginPage/LoginPage";
-import AddToCart from "./components/AddToCart/AddToCart";
+import Checkout from "./components/AddToCart/Checkout";
+import ProductDetails from './components/AddToCart/ProdDetails';
+import useCartHandler from './components/AddToCart/cartHandler';
+import Payment from "./components/Payment/Payment";
 
 function App() {
+  const { cart,addToCart, updateQuantity, removeFromCart } = useCartHandler();
+
   return (
+
    <div>
     <Router>
-         <Header/>
+         <Header/> 
     <div>
       <Routes>
          <Route path ="/"element={<Home/>}/>
          <Route path ="AboutUs"element={<AboutUs/>}/>
-         <Route path ="Services"element={<Services/>}/>
+         <Route path="/Services" element={<Services products={cart.products} addToCart={addToCart} cartItemCount={cart.items.length} />} />
          <Route path ="ContactUs"element={<ContactUs/>}/>
          <Route path ="LoginPage"element={<LoginPage/>}/>
-         <Route path ="AddToCart"element={<AddToCart/>}/>
+         <Route path="/Checkout" element={<Checkout cart={cart.items} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />} />
          <Route path ="SignUp"element={<SignUp/>}/>
-
+         <Route path="Payment" element ={<Payment/>}/>
+         <Route path="/product/:productId" element={<ProductDetails products={cart.products} />} />
+       
       </Routes>
     </div>
       <Footer/>

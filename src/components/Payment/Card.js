@@ -8,9 +8,8 @@ const Payment = () => {
     <div className="flex flex-col items-center bg-green-100 p-8 space-y-6">
       <h2 className="text-lg font-medium mb-4">Choose your payment method</h2>
 
-     
-      <div className="grid grid-cols-2 gap-6 w-full max-w-2xl">
-
+      <div className="grid grid-cols-1 gap-6 w-full max-w-2xl">
+        
         <div className="flex items-start bg-white p-6 rounded-lg shadow-md w-full">
           <div className="mr-6">
             <img 
@@ -46,7 +45,7 @@ const Payment = () => {
           </div>
         </div>
 
-       
+        
         <div className="flex items-start bg-white p-6 rounded-lg shadow-md w-full">
           <div className="mr-6">
             <img 
@@ -58,7 +57,7 @@ const Payment = () => {
           <div className="flex flex-col w-full">
             <form className="w-full space-y-4">
               <div>
-                <label className="block text-gray-700 font-semibold size-4 mb-1">Phone Number</label>
+                <label className="block text-gray-700 font-semibold mb-1">Phone Number</label>
                 <input 
                   type="text" 
                   placeholder="Enter phone number" 
@@ -82,8 +81,8 @@ const Payment = () => {
           </div>
         </div>
 
-      
-        <div className="col-span-2 flex items-start bg-white p-6 rounded-lg shadow-md w-full">
+        
+        <div className="flex items-start bg-white p-6 rounded-lg shadow-md w-full">
           <div className="mr-6">
             <img 
               src={NationalBank} 

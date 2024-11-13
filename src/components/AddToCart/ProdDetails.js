@@ -29,11 +29,12 @@ const ProductDetails = () => {
 
       <div className="flex flex-col md:flex-row  px-[4%]">
 
+
             {/* Product Image */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-start w-1/2 mb-8">
+          <div className="w-full h-full md:w-1/2 flex justify-center md:justify-start w-1/2 mb-8">
              <img src={product.image} alt={product.name}  className="w-full h-auto max-w-md border-2 border-gray-300 rounded-lg object-cover scale-[1.08]" />
           </div>
-
+          
             {/* Product Details */}
          <div className="w-full md:w-1/2 bg-green-100" >
               <h1 className="text-4xl font-bold mb-2">Details</h1>

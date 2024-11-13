@@ -12,6 +12,7 @@ import Checkout from "./components/AddToCart/Checkout";
 import ProductDetails from './components/AddToCart/ProdDetails';
 import useCartHandler from './components/AddToCart/cartHandler';
 import Payment from "./components/Payment/Payment";
+import DescriptionPage from "./components/Homepage/DescriptionPage";
 
 function App() {
   const { cart,addToCart, updateQuantity, removeFromCart } = useCartHandler();
@@ -32,6 +33,7 @@ function App() {
          <Route path ="SignUp"element={<SignUp/>}/>
          <Route path="Payment" element ={<Payment/>}/>
          <Route path="/product/:productId" element={<ProductDetails products={cart.products} />} />
+         <Route path ="DescriptionPage"element={<DescriptionPage/>}/>
        
       </Routes>
     </div>

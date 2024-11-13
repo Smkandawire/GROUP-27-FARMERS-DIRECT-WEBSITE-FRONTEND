@@ -40,7 +40,7 @@ const Header = () => {
               <Link to="/AboutUs">About</Link>
             </li>
             <li className="mb-2 cursor-pointer hover:text-orange-500">
-              <Link to="/Services">Service</Link>
+              <Link to="/Services">Products</Link>
             </li>
             <li className="mb-2 cursor-pointer hover:text-orange-500">
               <Link to="/ContactUs">Contact</Link>

@@ -76,9 +76,10 @@ const Header = () => {
                 </div>
               )}
             </li>
+            
             <li className="mb-2 cursor-pointer hover:text-orange-500">
               <Link to="Checkout">
-                <FontAwesomeIcon icon={faCartPlus} size="1x" />
+                <FontAwesomeIcon icon={faCartPlus} size="1x" /> 
               </Link>
             </li>
           </ul>

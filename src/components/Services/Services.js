@@ -15,8 +15,8 @@ const Service = ({ products, addToCart, cartItemCount }) => {
 
             <div className="flex grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4 items-center bg-green-100">
                 {products.map((product) => (
-                    <div key={product.id} className=" m-4 border border-gray-300 rounded-lg shadow-md p-1 bg-white" >
-                        <img src={product.image} alt={product.name} className="w-full h-32 object-cover" />
+                    <div key={product.id} className="m-4 border border-gray-300 min-h-[10rem] shadow-lg rounded-lg shadow-md p-1 bg-white" >
+                        <img src={product.image} alt={product.name} className="w-full h-full object-cover " />
                         <h3 className="mt-2 text-lg font-bold">{product.name}</h3>
                         <p className="text-[rgb(225,215,0)] font-bold">MWK{product.price}</p>
                         

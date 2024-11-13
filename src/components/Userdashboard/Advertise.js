@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
+
 
 function Advertise() {
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -65,7 +66,7 @@ function Advertise() {
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg w-48 py-2">
               <Link
-                to="/OrderManagement"
+                to='/OrderManagement'
                 className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
               >
                 Order Management
@@ -77,10 +78,10 @@ function Advertise() {
                 Sale Analysis
               </Link>
               <Link
-                to="/account"
+                to='/UserProfile'
                 className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
               >
-                Account
+                UserAccount
               </Link>
             </div>
           )}

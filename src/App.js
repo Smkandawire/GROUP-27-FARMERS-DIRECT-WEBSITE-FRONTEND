@@ -14,6 +14,8 @@ import useCartHandler from './components/AddToCart/cartHandler';
 import Payment from "./components/Payment/Payment";
 import DescriptionPage from "./components/Homepage/DescriptionPage";
 import Advertise from "./components/Userdashboard/Advertise";
+import UserProfile from "./components/Userdashboard/UserProfile";
+import OrderManagement from "./components/Userdashboard/OrderManagement";
 
 function App() {
   const { cart,addToCart, updateQuantity, removeFromCart } = useCartHandler();
@@ -36,6 +38,8 @@ function App() {
          <Route path="/product/:productId" element={<ProductDetails products={cart.products} />} />
          <Route path ="DescriptionPage"element={<DescriptionPage/>}/>
          <Route path="Advertise" element ={<Advertise/>}/>
+         <Route path="OrderManagement" element ={<OrderManagement/>}/>
+         <Route path="UserProfile" element ={< UserProfile/>}/>
       </Routes>
     </div>
       <Footer/>

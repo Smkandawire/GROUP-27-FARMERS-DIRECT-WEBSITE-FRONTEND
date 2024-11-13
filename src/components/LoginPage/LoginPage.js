@@ -35,7 +35,7 @@ export default function LoginPage(){
                       <input className="bg-gray-200" type="password" id="password" name="Password" placeholder="Password" style={{ width: '100%', padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }} required />
                   </div>
                   <br/> 
-                  <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#0a0a0a', color: '#fff', border: 'none', borderRadius: '10px', cursor: 'pointer' }}><Link to='/Payment'>LOGIN</Link></button>    
+                  <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#0a0a0a', color: '#fff', border: 'none', borderRadius: '10px', cursor: 'pointer' }}><Link to='/Advertise'>LOGIN</Link></button>    
         </form>
         
         <div className="flex justify-end font-bold" style={{ backgroundColor: 'transparent', marginTop: '10px' }}>

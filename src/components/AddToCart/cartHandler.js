@@ -13,6 +13,11 @@ const productsData = [
     { id: 7, name: 'tractor', price: 5000000.00, image: tractor, description: 'durable and versatile tructor. MWK 200000 each' },
     { id: 8, name: 'tractor', price: 5000000.00, image: tractor, description: 'durable and versatile tructor. MWK 200000 each' },
     { id: 9, name: 'tractor', price: 5000000.00, image: tractor, description: 'durable and versatile tructor. MWK 200000 each' },
+    { id: 10, name: 'vegetables', price: 2000, image: vegetables, description: 'fresh and clean vetables. MWK 2000 per killogram' },
+    { id: 11, name: 'vegetables', price: 2000, image: vegetables, description: 'fresh and clean vetables. MWK 2000 per killogram' },
+    { id: 12, name: 'vegetables', price: 2000, image: vegetables, description: 'fresh and clean vetables. MWK 2000 per killogram' },
+    { id: 13, name: 'vegetables', price: 2000, image: vegetables, description: 'fresh and clean vetables. MWK 2000 per killogram' },
+
 ];
 
 const useCartHandler = () => {
@@ -39,12 +44,15 @@ const useCartHandler = () => {
     const removeFromCart = (id) => {
         setCartItems((prevCart) => prevCart.filter((item) => item.id !== id));
     };
+     
+    const cartItemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
 
     return {
         cart: { products: productsData, items: cartItems },
         addToCart,
         updateQuantity,
         removeFromCart,
+        cartItemCount,
     };
 };
 

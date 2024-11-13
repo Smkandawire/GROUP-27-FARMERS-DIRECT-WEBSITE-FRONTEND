@@ -15,7 +15,7 @@ import Payment from "./components/Payment/Payment";
 import DescriptionPage from "./components/Homepage/DescriptionPage";
 
 function App() {
-  const { cart,addToCart, updateQuantity, removeFromCart } = useCartHandler();
+  const { cart,addToCart, updateQuantity, removeFromCart,cartItemCount} = useCartHandler();
 
   return (
 
@@ -26,7 +26,7 @@ function App() {
       <Routes>
          <Route path ="/"element={<Home/>}/>
          <Route path ="AboutUs"element={<AboutUs/>}/>
-         <Route path="/Services" element={<Services products={cart.products} addToCart={addToCart} cartItemCount={cart.items.length} />} />
+         <Route path="/Services" element={<Services products={cart.products} addToCart={addToCart} cartItemCount={cartItemCount} />} />
          <Route path ="ContactUs"element={<ContactUs/>}/>
          <Route path ="LoginPage"element={<LoginPage/>}/>
          <Route path="/Checkout" element={<Checkout cart={cart.items} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />} />

@@ -27,7 +27,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bannerImages.length);
-    }, 4000); // Change every 3 seconds
+    },2000); // Change every 3 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);

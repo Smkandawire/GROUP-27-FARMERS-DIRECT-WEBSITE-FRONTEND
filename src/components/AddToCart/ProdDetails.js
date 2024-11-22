@@ -36,6 +36,30 @@ const ProductDetails = () => {
           />
         </div>
 
+
+            {/* Product Image */}
+          <div className="w-full h-full md:w-1/2 flex justify-center md:justify-start w-1/2 mb-8">
+             <img src={product.image} alt={product.name}  className="w-full h-auto max-w-md border-2 border-gray-300 rounded-lg object-cover scale-[1.08]" />
+          </div>
+          
+            {/* Product Details */}
+         <div className="w-full md:w-1/2 bg-green-100" >
+              <h1 className="text-4xl font-bold mb-2">Details</h1>
+              <div className="w-full h-0.5 bg-black mb-4"></div>
+
+              <div className="text-2xl font-bold mb-2">{product.name}</div>
+              <p className="text-2xl font-semibold mb-4 text-[rgb(225,215,0)]">MWK{product.price}</p>
+              <p className="text-gray-700 mb-4">{product.description}</p>
+              <div className="mt-20"></div>
+
+                 {/* payment button */}
+              <div className="flex justify-start mt-4 bottom-4">
+                <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-800">
+                  <Link to="/Payment"> Make payment</Link>    
+                </button>
+              </div>
+         </div>
+
         {/* Product Details */}
         <div className="w-full md:w-1/2 bg-green-100">
           <h1 className="text-4xl font-bold mb-2">Details</h1>
@@ -54,6 +78,7 @@ const ProductDetails = () => {
             </Link>
           </div>
         </div>
+
       </div>
     </div>
   );

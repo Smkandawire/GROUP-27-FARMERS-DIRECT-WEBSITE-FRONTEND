@@ -1,5 +1,3 @@
-// src/components/Login.js
-
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import logo from "../Header/logo.png";
@@ -7,9 +5,11 @@ import logo from "../Header/logo.png";
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState(''); // State for error messages
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setErrorMessage(''); // Reset error message
     try {
       const response = await fetch('http://localhost:3000/user/login', {
         method: 'POST',
@@ -24,9 +24,13 @@ const Login = () => {
         alert('Login successful!');
         localStorage.setItem('token', data.accessToken); // Store token in localStorage
       } else {
-        alert('Login failed');
+        const errorData = await response.json();
+        setErrorMessage(
+          errorData.message || 'Incorrect credentials. Please try again.'
+        );
       }
     } catch (error) {
+      setErrorMessage('An error occurred during login. Please try again later.');
       console.error('Error during login:', error);
     }
   };
@@ -52,6 +56,14 @@ const Login = () => {
           </div>
           <h3 className="text-center font-extrabold text-black">WELCOME TO FARMERS DIRECT</h3>
           <br />
+          {errorMessage && (
+            <div
+              className="bg-red-500 text-white text-center p-2 rounded mb-4"
+              role="alert"
+            >
+              {errorMessage}
+            </div>
+          )}
           <div className="input-group mb-4">
             <label htmlFor="email" className="font-bold block mb-1">
               Email

@@ -1,5 +1,3 @@
-// src/components/Signup.js
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,13 +6,15 @@ const Signup = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState(''); // State for error messages
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setErrorMessage(''); // Reset error message
 
     // Password confirmation check
     if (password !== confirmPassword) {
-      alert('Passwords do not match.');
+      setErrorMessage('Passwords do not match.');
       return;
     }
 
@@ -30,9 +30,11 @@ const Signup = () => {
       if (response.ok) {
         alert('Signup successful!');
       } else {
-        alert('Signup failed');
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || 'Signup failed. Please try again.');
       }
     } catch (error) {
+      setErrorMessage('An error occurred during signup. Please try again later.');
       console.error('Error during signup:', error);
     }
   };
@@ -41,6 +43,16 @@ const Signup = () => {
     <div className="flex items-center justify-center min-h-screen bg-green-100">
       <div className="bg-white p-10 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold text-center mb-4">Sign up for Farmers Direct</h2>
+
+        {/* Error Message */}
+        {errorMessage && (
+          <div
+            className="bg-red-500 text-white text-center p-2 rounded mb-4"
+            role="alert"
+          >
+            {errorMessage}
+          </div>
+        )}
 
         <form className="space-y-4" onSubmit={handleSubmit}>
           <input

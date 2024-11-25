@@ -18,8 +18,11 @@ import UserProfile from "./components/Userdashboard/UserProfile";
 import OrderManagement from "./components/Userdashboard/OrderManagement";
 
 function App() {
+
   const { cart, addToCart, updateQuantity, removeFromCart } = useCartHandler();
   const location = useLocation();
+  const { cart,addToCart, updateQuantity, removeFromCart,cartItemCount} = useCartHandler();
+
 
   // Define the paths where the header and footer should not be shown
   const noHeaderPaths = ['/LoginPage', '/SignUp', '/payment','/Advertise'];
@@ -27,6 +30,7 @@ function App() {
 
   return (
     <div>
+
       {/* Conditionally render the header based on the current path */}
       {!noHeaderPaths.includes(location.pathname) && <Header />}
       
@@ -50,6 +54,21 @@ function App() {
       
       {/* Conditionally render the footer based on the current path */}
       {!noFooterPaths.includes(location.pathname) && <Footer />}
+      <Routes>
+         <Route path ="/"element={<Home/>}/>
+         <Route path ="AboutUs"element={<AboutUs/>}/>
+         <Route path="/Services" element={<Services products={cart.products} addToCart={addToCart} cartItemCount={cartItemCount} />} />
+         <Route path ="ContactUs"element={<ContactUs/>}/>
+         <Route path ="LoginPage"element={<LoginPage/>}/>
+         <Route path="/Checkout" element={<Checkout cart={cart.items} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />} />
+         <Route path ="SignUp"element={<SignUp/>}/>
+         <Route path="Payment" element ={<Payment/>}/>
+         <Route path="/product/:productId" element={<ProductDetails products={cart.products} />} />
+         <Route path ="DescriptionPage"element={<DescriptionPage/>}/>
+         <Route path="Advertise" element ={<Advertise/>}/>
+         <Route path="OrderManagement" element ={<OrderManagement/>}/>
+         <Route path="UserProfile" element ={< UserProfile/>}/>
+      </Routes>
     </div>
   );
 }

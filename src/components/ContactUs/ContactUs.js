@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { HomeIcon, UserIcon, CogIcon } from '@heroicons/react/solid';
+import { LocationMarkerIcon, UserIcon, ChatIcon } from '@heroicons/react/solid';
 
 const ContactUs = () => {
   // State to track form fields
@@ -91,13 +91,13 @@ const ContactUs = () => {
         
         <div className="flex justify-center space-x-4 mt-8">
   <div className="bg-green-400 h-32 w-32 rounded-lg shadow-md flex items-center justify-center transition transform hover:scale-105">
-    <HomeIcon className="h-16 w-16 text-white" />
+    <LocationMarkerIcon className="h-16 w-16 text-white" />
   </div>
   <div className="bg-green-400 h-32 w-32 rounded-lg shadow-md flex items-center justify-center transition transform hover:scale-105">
     <UserIcon className="h-16 w-16 text-white" />
   </div>
   <div className="bg-green-400 h-32 w-32 rounded-lg shadow-md flex items-center justify-center transition transform hover:scale-105">
-    <CogIcon className="h-16 w-16 text-white" />
+    <ChatIcon className="h-16 w-16 text-white" />
   </div>
         </div>
 

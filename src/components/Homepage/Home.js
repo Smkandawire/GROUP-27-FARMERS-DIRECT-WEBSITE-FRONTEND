@@ -19,6 +19,7 @@ import fertilizer from './fertilizer.jpg';
 import hoes from './hoes.jpg';
 import turkey from './turkey.jpg';
 
+
 const bannerImages = [farmersdirect1, farmersdirect2, farmersdirect3,Agrichemicals];
 
 const Home = () => {
@@ -35,20 +36,20 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       {/* Banner */}
-      <div className="relative bg-white rounded-lg overflow-hidden">
+      <div className="w-full h-screen relative bg-white rounded-lg overflow-hidden">
         <img
           src={bannerImages[currentImageIndex]}
           alt="Farmer Banner"
-          className="w-full h-[50vh] object-cover"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center p-4">
-          <h1 className="text-4xl font-bold text-orange-500 uppercase mb-4">
+          <h1 className="text-6xl font-bold text-orange-500 uppercase mb-4">
             Welcome to <i className='text-white'>Farmers Direct</i> 
           </h1>
-          <p className="text-lg text-green-600 font-bold">Your Partner in Farming Excellence</p>
+          <p className="text-4xl text-green-600 font-bold fade-in-up">Your Partner in Farming Excellence</p>
+          <button className='bg-orange-500 text-white m-20 p-5 rounded-full text-xl font-bold'><Link to='/Services'>Get Started</Link></button>
         </div>
       </div>
-
       {/* Featured Deals Section */}
       <div className="flex flex-col items-center border p-4 m-8">
         <div className="m-8">

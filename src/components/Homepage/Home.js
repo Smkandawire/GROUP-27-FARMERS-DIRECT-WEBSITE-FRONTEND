@@ -27,7 +27,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bannerImages.length);
-    }, 4000); // Change every 3 seconds
+    },2000); // Change every 3 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
@@ -124,7 +124,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
             <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+            <Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div>
         <div className="text-center p-4 border p-8 m-3 hover:scale-105 active:scale-100">
@@ -148,7 +148,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
             <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+            <Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div>
         <div className="text-center p-4 border p-8 m-3 hover:scale-105 active:scale-100">
@@ -172,7 +172,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
             <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+            <Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div> 
           <div className="text-center p-4 border p-8 m-3 hover:scale-105 active:scale-100">
@@ -196,7 +196,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
             <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+            <Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div>
           <div className="text-center p-4 border p-8 m-3 hover:scale-105 active:scale-100">
@@ -220,7 +220,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
             <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+            <Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div>
           <div className="text-center p-4 border p-8 m-3 hover:scale-105 active:scale-100">
@@ -244,7 +244,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
             <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+            <Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div>
           <div className="text-center p-4 border p-8 m-3 hover:scale-105 active:scale-100">
@@ -268,7 +268,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
             <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+            <Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div>
           <div className="text-center p-4 border p-8 m-3 hover:scale-105 active:scale-100">
@@ -292,7 +292,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
             <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+            <Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div>
           <div className="text-center p-4 border p-8 m-3 hover:scale-105 active:scale-100">
@@ -316,7 +316,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
             <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+            <Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div>
           <div className="text-center p-4 border p-8 m-3 hover:scale-105 active:scale-100">
@@ -340,7 +340,7 @@ const Home = () => {
        <span>Available Now</span>
         </div>
 <button className="bg-orange-500 text-white p-3 m-5 rounded hover:bg-orange-600">
-              Buy Now
+<Link to='/LoginPage'>Buy Now</Link>
             </button>
           </div>
         </div>

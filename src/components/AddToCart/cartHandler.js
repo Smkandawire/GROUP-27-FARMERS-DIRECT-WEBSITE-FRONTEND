@@ -28,6 +28,7 @@ const productsData = [
     { id: 12, name: 'Plants and Flowers', price: 2400.50, image: flowers, description: 'From Farm to Vase: The Freshest Flowers Around(Roses,Orchids).MWK 2400 Only' },
     
     
+
 ];
 
 const useCartHandler = () => {
@@ -54,12 +55,15 @@ const useCartHandler = () => {
     const removeFromCart = (id) => {
         setCartItems((prevCart) => prevCart.filter((item) => item.id !== id));
     };
+     
+    const cartItemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
 
     return {
         cart: { products: productsData, items: cartItems },
         addToCart,
         updateQuantity,
         removeFromCart,
+        cartItemCount,
     };
 };
 

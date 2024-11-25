@@ -13,9 +13,12 @@ import ProductDetails from './components/AddToCart/ProdDetails';
 import useCartHandler from './components/AddToCart/cartHandler';
 import Payment from "./components/Payment/Payment";
 import DescriptionPage from "./components/Homepage/DescriptionPage";
+import Advertise from "./components/Userdashboard/Advertise";
+import UserProfile from "./components/Userdashboard/UserProfile";
+import OrderManagement from "./components/Userdashboard/OrderManagement";
 
 function App() {
-  const { cart,addToCart, updateQuantity, removeFromCart } = useCartHandler();
+  const { cart,addToCart, updateQuantity, removeFromCart,cartItemCount} = useCartHandler();
 
   return (
 
@@ -26,7 +29,7 @@ function App() {
       <Routes>
          <Route path ="/"element={<Home/>}/>
          <Route path ="AboutUs"element={<AboutUs/>}/>
-         <Route path="/Services" element={<Services products={cart.products} addToCart={addToCart} cartItemCount={cart.items.length} />} />
+         <Route path="/Services" element={<Services products={cart.products} addToCart={addToCart} cartItemCount={cartItemCount} />} />
          <Route path ="ContactUs"element={<ContactUs/>}/>
          <Route path ="LoginPage"element={<LoginPage/>}/>
          <Route path="/Checkout" element={<Checkout cart={cart.items} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />} />
@@ -34,7 +37,9 @@ function App() {
          <Route path="Payment" element ={<Payment/>}/>
          <Route path="/product/:productId" element={<ProductDetails products={cart.products} />} />
          <Route path ="DescriptionPage"element={<DescriptionPage/>}/>
-       
+         <Route path="Advertise" element ={<Advertise/>}/>
+         <Route path="OrderManagement" element ={<OrderManagement/>}/>
+         <Route path="UserProfile" element ={< UserProfile/>}/>
       </Routes>
     </div>
       <Footer/>

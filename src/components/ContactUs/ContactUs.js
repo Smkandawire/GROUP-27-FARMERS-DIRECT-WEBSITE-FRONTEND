@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const ContactUs = () => {
@@ -48,22 +49,35 @@ const ContactUs = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submission
+  // Handle form submission with EmailJS
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      setIsSubmitting(true); // Show loading state
-      setTimeout(() => {
-        alert('Message sent successfully!');
-        setFormData({
-          fullName: '',
-          email: '',
-          subject: '',
-          message: '',
+      setIsSubmitting(true);
+
+      // Replace with your EmailJS Service ID, Template ID, and User ID
+      const serviceID = 'service_njty4k6';
+      const templateID = 'template_3a651au';
+      const userID = 'WUsmOHpXsgwFv_zpl';
+
+      emailjs
+        .send(serviceID, templateID, formData, userID)
+        .then(() => {
+          alert('Message sent successfully!');
+          setFormData({
+            fullName: '',
+            email: '',
+            subject: '',
+            message: '',
+          });
+          setErrors({});
+          setIsSubmitting(false);
+        })
+        .catch((error) => {
+          alert('Failed to send message, please try again later.');
+          console.error('EmailJS Error:', error);
+          setIsSubmitting(false);
         });
-        setErrors({});
-        setIsSubmitting(false); // End loading state
-      }, 2000);
     }
   };
 

@@ -39,7 +39,7 @@ const Payment = () => {
                 type="submit" 
                 className="w-full bg-green-500 text-white font-semibold py-2 rounded-md hover:bg-green-600 mt-4"
               >
-                Confirm 
+              Proceed
               </button>
             </form>
           </div>
@@ -75,7 +75,7 @@ const Payment = () => {
                 type="submit" 
                 className="w-full bg-green-500 text-white font-semibold py-2 rounded-md hover:bg-green-600 mt-4"
               >
-                Confirm 
+              Proceed
               </button>
             </form>
           </div>
@@ -119,7 +119,7 @@ const Payment = () => {
                 type="submit" 
                 className="w-full bg-green-500 text-white font-semibold py-2 rounded-md hover:bg-green-600 mt-4"
               >
-                Confirm 
+              Proceed
               </button>
             </form>
           </div>

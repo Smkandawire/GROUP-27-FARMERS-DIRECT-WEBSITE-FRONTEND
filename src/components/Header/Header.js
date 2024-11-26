@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <div className='text-base sm:text-lg md:text-xl lg:text-2xl'> 
       
-      <div className='bg-green-500 text-xl font-light m-2 p-4 text-white rounded-full border-2'>
+      <div className='bg-green-500 text-xl font-light m-2 p-1 text-white rounded-full border-2'>
    
         <nav>
           <ul className='flex items-center flex-row space-x-20 list-none text-2xl text-black justify-center'>

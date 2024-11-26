@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios'; // Import Axios
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -19,22 +20,20 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/user/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, username, password }),
+      const response = await axios.post('http://localhost:3000/user/signup', {
+        email: email,
+        username: username,
+        password: password,
       });
 
-      if (response.ok) {
-        alert('Signup successful!');
-      } else {
-        const errorData = await response.json();
-        setErrorMessage(errorData.message || 'Signup failed. Please try again.');
-      }
+      console.log('User signed up successfully:', response.data);
+      alert('Signup successful!');
     } catch (error) {
-      setErrorMessage('An error occurred during signup. Please try again later.');
+      if (error.response) {
+        setErrorMessage(error.response.data.message || 'Signup failed. Please try again.');
+      } else {
+        setErrorMessage('An error occurred during signup. Please try again later.');
+      }
       console.error('Error during signup:', error);
     }
   };

@@ -49,54 +49,74 @@ const Home = () => {
           <p className="text-4xl text-green-600 font-bold fade-in-up">Your Partner in Farming Excellence</p>
           <button className='bg-orange-500 text-white m-20 p-5 rounded-full text-xl font-bold'><Link to='/Services'>Get Started</Link></button>
         </div>
-      </div>
+        </div>
       {/* Featured Deals Section */}
-      <div className="flex flex-col items-center border p-4 m-8">
-        <div className="m-8">
-          <h2 className="text-orange-500 text-4xl">FEATURED DEALS </h2>
-          <p className='text-green-700 text-xl'>We offer nothing but the best value</p>
-        </div>
-        <div className="flex flex-wrap gap-2 p-4">
-          <div className="bg-white text-center rounded shadow">
-            <img
-              src={Agrichemicals}
-              alt="Machinery"
-              className="w-full h-52 object-cover rounded transition-transform transform hover:scale-110"
-            />
-            <h3 className="text-lg font-semibold text-green-600 ">Machinery</h3>
-            <h4 className='m-3 p-3 text-black font-bold'>High-quality farming machineries at unbeatable prices</h4>
-          </div>
-          <div className="bg-white text-center rounded shadow">
-            <img
-              src={farmersdirect2}
-              alt="Farm products"
-              className="w-full h-52 object-cover rounded transition-transform transform hover:scale-110"
-            />
-            <h3 className="text-green-600 font-bold">Farm Products</h3>
-            <h4 className='m-3 p-3 text-black font-bold'>Buy quality farm produce at affordable rates</h4>
-          </div>
-          <div className="bg-white text-center rounded shadow">
-            <img
-              src={Agrichemicals1}
-              alt="Agri-chemicals"
-              className="w-full h-52 object-cover rounded transition-transform transform hover:scale-110"
-            />
-            <h3 className="text-green-600 font-bold">Agri-chemicals</h3>
-            <h4 className='m-3 p-3 text-black font-bold'>Protect your crops and livestocks with quantity</h4>
-          </div>
-          <div className="bg-white text-center rounded shadow">
-            <img
-              src={chicken}
-              alt="Live Stock"
-              className="w-full h-52 object-cover rounded transition-transform transform hover:scale-110"
-            />
-            <h3 className="text-green-600 font-bold">Live Stock</h3>
-           
-            <h4 className='p-3 m-3 font-bold text-black'>Offers all breeds of Poultry and Livestocks for raising </h4>
-          </div>
-        </div>
-        <button className='bg-green-500 text-white p-3 m-5 rounded hover:bg-orange-600'><Link to='/DescriptionPage'>See More</Link></button>
-      </div>
+       {/* Featured Deals Section */}
+<div className="flex flex-col items-center border-4 p-5 m-6 sm:m-10 border-8">
+  <div className="m-4 sm:m-8 text-center">
+    <h2 className="text-orange-500 text-2xl sm:text-3xl lg:text-4xl">FEATURED DEALS</h2>
+    <p className='text-green-700 text-lg sm:text-xl'>We offer nothing but the best value</p>
+  </div>
+  <div className="flex flex-wrap justify-center gap-4 p-4 sm:p-6">
+    <div className="bg-white text-center rounded shadow w-full sm:w-1/2 lg:w-1/4 p-2 sm:p-4">
+      <img
+        src={Agrichemicals}
+        alt="Machinery"
+        className="w-full h-48 sm:h-64 object-cover rounded transition-transform transform hover:scale-110"
+      />
+      <h3 className="text-lg font-semibold text-green-600 mt-2">Machinery</h3>
+      <h4 className='m-2 p-2 text-black font-bold'>High-quality farming machineries at unbeatable prices</h4>
+    </div>
+    <div className="bg-white text-center rounded shadow w-full sm:w-1/2 lg:w-1/4 p-2 sm:p-4">
+      <img
+        src={farmersdirect2}
+        alt="Farm products"
+        className="w-full h-48 sm:h-64 object-cover rounded transition-transform transform hover:scale-110"
+      />
+      <h3 className="text-lg font-semibold text-green-600 mt-2">Farm Products</h3>
+      <h4 className='m-2 p-2 text-black font-bold'>Buy quality farm produce at affordable rates</h4>
+    </div>
+    <div className="bg-white text-center rounded shadow w-full sm:w-1/2 lg:w-1/4 p-2 sm:p-4">
+      <img
+        src={Agrichemicals1}
+        alt="Agri-chemicals"
+        className="w-full h-48 sm:h-64 object-cover rounded transition-transform transform hover:scale-110"
+      />
+      <h3 className="text-lg font-semibold text-green-600 mt-2">Agri-chemicals</h3>
+      <h4 className='m-2 p-2 text-black font-bold'>Protect your crops and livestock with quantity</h4>
+    </div>
+    <div className="bg-white text-center rounded shadow w-full sm:w-1/2 lg:w-1/4 p-2 sm:p-4">
+      <img
+        src={chicken}
+        alt="Live Stock"
+        className="w-full h-48 sm:h-64 object-cover rounded transition-transform transform hover:scale-110"
+      />
+      <h3 className="text-lg font-semibold text-green-600 mt-2">Live Stock</h3>
+      <h4 className='m-2 p-2 text-black font-bold'>Offers all breeds of Poultry and Livestock for raising</h4>
+    </div>
+    <div className="bg-white text-center rounded shadow w-full sm:w-1/2 lg:w-1/4 p-2 sm:p-4">
+      <img
+        src={milk}
+        alt="New Product 1"
+        className="w-full h-48 sm:h-64 object-cover rounded transition-transform transform hover:scale-110"
+      />
+      <h3 className="text-lg font-semibold text-green-600 mt-2">Proceed goods</h3>
+      <h4 className='m-2 p-2 text-black font-bold'>Innovative agricultural tool enhancing efficiency and yield</h4>
+    </div>
+    <div className="bg-white text-center rounded shadow w-full sm:w-1/2 lg:w-1/4 p-2 sm:p-4">
+      <img
+        src={turkey}
+        alt="New Product 2"
+        className="w-full h-48 sm:h-64 object-cover rounded transition-transform transform hover:scale-110"
+      />
+      <h3 className="text-lg font-semibold text-green-600 mt-2">Local animals</h3>
+      <h4 className='m-2 p-2 text-black font-bold'>Innovative agricultural tool enhancing efficiency and yield</h4>
+    </div>
+  </div>
+  <button className='bg-green-500 text-white p-2 sm:p-3 m-3 sm:m-5 rounded hover:bg-orange-600'>
+    <Link to='/DescriptionPage'>See More</Link>
+  </button>
+</div>
 
       {/* In Stock Section */}
       <div className="flex flex-col items-center border p-10 m-10">

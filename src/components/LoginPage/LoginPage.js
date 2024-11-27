@@ -96,7 +96,11 @@ const Login = () => {
             type="submit"
             className="w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 transition mb-4"
           >
+
      <Link to='/Advertise'>LOGIN</Link>
+
+        <Link to='/Payment'>LOGIN</Link>
+
           </button>
         </form>
 

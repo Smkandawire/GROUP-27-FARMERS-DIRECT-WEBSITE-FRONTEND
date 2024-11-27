@@ -17,9 +17,9 @@ const productsData = [
 
     { id: 1, name: 'vegetables', price: 2000, image: vegetables, description: 'fresh and clean vetables. MWK 2000 per killogram' },
     { id: 2, name: 'tractor', price: 500000.00, image: tractor, description: 'durable and versatile tructor. MWK 200000 each' },
-    { id: 3, name: 'Water pump', price: 200000.99, image: wpump, description: 'Duracbles water pump.' },
-    { id: 4, name: 'Water pump', price: 200000.99, image: wpump, description: 'Duracbles water pump.' },
-    { id: 5, name: 'Water pump', price: 200000.99, image: wpump, description: 'Duracbles water pump.' },
+   // { id: 3, name: 'Water pump', price: 200000.99, image: wpump, description: 'Duracbles water pump.' },
+  //  { id: 4, name: 'Water pump', price: 200000.99, image: wpump, description: 'Duracbles water pump.' },
+  //  { id: 5, name: 'Water pump', price: 200000.99, image: wpump, description: 'Duracbles water pump.' },
     { id: 6, name: 'tractor', price: 5000000.00, image: tractor, description: 'durable and versatile tructor. MWK 200000 each' },
     { id: 7, name: 'tractor', price: 5000000.00, image: tractor, description: 'durable and versatile tructor. MWK 200000 each' },
     { id: 8, name: 'tractor', price: 5000000.00, image: tractor, description: 'durable and versatile tructor. MWK 200000 each' },

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 
 function Advertise() {
@@ -32,10 +32,10 @@ function Advertise() {
   // Handle goods upload
   const handleGoodsUpload = () => {
     const newGoods = {
+      files: selectedFiles,
       amount: paymentDetails.amount,
       location: paymentDetails.location,
       description: paymentDetails.description,
-      files: selectedFiles,
     };
     setUploadedGoods((prevGoods) => [...prevGoods, newGoods]);
 
@@ -92,8 +92,19 @@ function Advertise() {
       <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">Upload Goods</h2>
 
+        {/* File Upload Section */}
+        <div className="mb-6">
+          <label className="block text-lg font-medium text-gray-700">Select Goods (Files) to Upload</label>
+          <input
+            type="file"
+            multiple
+            onChange={handleFileChange}
+            className="mt-2 block w-full text-sm text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+        </div>
+
         {/* Payment Details Section */}
-        <div className="grid grid-cols-1 gap-6 mb-6">
+        <div className="grid grid-cols-1 gap-6 mb-8">
           <div>
             <label className="block text-lg font-medium text-gray-700">Amount</label>
             <input
@@ -130,17 +141,6 @@ function Advertise() {
           </div>
         </div>
 
-        {/* File Upload Section */}
-        <div className="mb-6">
-          <label className="block text-lg font-medium text-gray-700">Select Goods (Files) to Upload</label>
-          <input
-            type="file"
-            multiple
-            onChange={handleFileChange}
-            className="mt-2 block w-full text-sm text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-        </div>
-
         {/* Upload Button */}
         <div className="flex justify-end">
           <button
@@ -158,7 +158,7 @@ function Advertise() {
             <ul className="space-y-4">
               {uploadedGoods.map((goods, index) => (
                 <li key={index} className="bg-gray-50 p-4 rounded-md shadow-md">
-                  <p className="font-semibold text-gray-700">Amount: ${goods.amount}</p>
+                  <p className="font-semibold text-gray-700">Amount: MWK{goods.amount}</p>
                   <p className="text-gray-600">Location: {goods.location}</p>
                   <p className="text-gray-600">Description: {goods.description}</p>
                   <div className="mt-2">
